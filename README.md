@@ -1,10 +1,10 @@
 # SimpleCanBusBridge
-The `CanBusBridge` component provides a mechanism to connect and convert between virtual CAN frames and real hardware CAN frames. 
+The `CanBusBridge` connects and convert between virtual CAN frames and real hardware CAN frames. 
 
-The CanBusBridge component is an interface between a hardware CAN bus and the virtual CAN bus environment, enabling communication between them.
+The `CanBusBridge` is an interface between a hardware CAN bus and the virtual CAN bus environment, enabling communication between them.
 
 ## Key Features
-- Initialization: The CanBusBridge component is initialized with configuration settings and checks if the virtual and hardware CAN buses are available.
+- Initialization: The `CanBusBridge` iinitialized with configuration (via config file) and checks if the virtual and hardware CAN buses are available.
 
 - CAN Frame Conversion: Converts between virtual CAN frames and real hardware CAN frames.
 
@@ -13,7 +13,7 @@ The CanBusBridge component is an interface between a hardware CAN bus and the vi
 ## How It Works
 - Load (`doLoad()`)
 
-The CanBusBridge component loads necessary configurations using the `doLoad()` function, which validates the configuration and fetches settings from the Options object. It also checks for the presence of required sections in configuration files (e.g., ComSpec).
+The `CanBusBridge` loads necessary configurations using the `doLoad()` function, which validates the configuration and fetches settings from the Options object. It also checks for the presence of required sections in configuration files (e.g., ComSpec).
 
 
 - Initialization (`doInit()`)
@@ -29,4 +29,4 @@ Input: Frames from the virtual bus are sent to the hardware bus. If the frame ty
 
 - CAN Frame Handling:
 
-The setFrame() function is responsible for sending a frame from the virtual network to the hardware bus. It checks if the frame is defined in the configuration and sends it accordingly.
+The `setFrame()` function is responsible for sending a frame from the virtual network to the hardware bus. It checks if the frame is defined in the configuration and sends it accordingly.
